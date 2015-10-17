@@ -1,0 +1,15 @@
+<h2>Server Canvas</h2>
+
+<div class="cluster row">
+	<div class="col-xs-12 xol-sm-4 col-md-3 server" ng-repeat="server in servers">
+		<div class="app">
+			<div style="background-color: {{ app.color }}"
+				 ng-repeat="app in server.apps">
+				<span class="abbr">{{ app.abbr }}</span>
+				<span class="name">{{ app.name }}</span>
+				<span class="time">Added {{ app.addTime }}</span>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>

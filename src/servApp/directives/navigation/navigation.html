@@ -1,0 +1,35 @@
+<nav role="navigation">
+	<div class="server-nav">
+		<div class="item" ng-click="addServer()">
+			<div class="circle-wrap">
+				<i class="glyphicon glyphicon-plus"></i>
+			</div>
+			<br>
+			<span class="label">Add Server</span>
+		</div>
+		<div class="item" ng-click="destroyServer()">
+			<div class="circle-wrap">
+				<i class="glyphicon glyphicon-minus"></i>
+			</div>
+			<br>
+			<span class="label">Destroy</span>
+		</div>
+	</div>
+
+	<div class="apps">
+		<label>Available Apps</label>
+		<div class="list">
+			<div class="item" ng-repeat="app in apps" style="border-color: {{ app.color }}">
+				{{ app.name }}
+				<div class="action remove" ng-click="unmountApp(app)">
+					<i class="glyphicon glyphicon-minus"></i>			
+				</div>
+				<div class="action add" style="background-color: {{ app.color }}" ng-click="mountApp(app)">
+					<i class="glyphicon glyphicon-plus"></i>			
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<div class="clearfix"></div>

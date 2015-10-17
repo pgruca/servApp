@@ -1,0 +1,126 @@
+body {
+	background: #000;
+	color: #fff;
+}
+
+nav {
+	background: #1e1e1e;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;	
+	width: 320px;
+}
+
+p {
+	color: #fff;
+}
+
+section {
+	margin-left: 320px;
+	padding: 15px 35px;
+}
+
+.server-nav {
+	text-align: center;
+	margin-top: 60px;
+	.item {
+		display: inline-block;
+		margin: 0 7px;
+		opacity: 0.5;
+		color: #fff;
+		cursor: pointer;
+		transition: all .25s ease-in-out;
+		&:hover {
+			opacity: 1;
+		}
+		.circle-wrap {
+			display: inline-block;
+			width: 58px;
+			height: 58px;
+			border: 2px solid #fff;
+			border-radius: 50%;
+			font-size: 27px;
+			margin-bottom: 10px;
+			.glyphicon-plus {
+				padding: 12px 14px;
+			}
+			.glyphicon-minus {
+				padding: 12px 13px;
+			}
+		}
+		.label {
+			font-size: 11px;
+		}
+	}
+}
+
+.apps {
+	margin-top: 170px;
+	label {
+		padding: 15px 34px;
+		font-size: 11px;
+		color: #8e8e8e;
+	}
+	.item {
+		background: #141414;
+		font-size: 13px;
+		color: #fff;
+		padding: 20px 0 20px 30px;
+		margin-bottom: 1px;
+		border-left: 5px solid;
+		position: relative;
+		font-weight: 700;
+		.action {
+			border-radius: 50%;
+			height: 30px;
+			width: 30px;
+			position: absolute;
+			top: 50%;
+			margin-top: -15px;
+			text-align: center;
+			cursor: pointer;
+			transition: all .25s ease-in-out;
+			&.remove {
+				border: 2px solid #1e1e1e;
+				color: #1e1e1e; 
+				right: 25px;
+				&:hover {
+					border-color: red;
+					color: red; 
+				}
+				i {
+					left:-1px;
+					top:6px;
+				}
+			}
+			&.add {
+				right: -15px;
+				i {
+					top: 7px;
+					left: 1px;
+				}
+			}
+
+		}
+	}
+}
+
+
+.cluster {
+	max-width: 900px;
+	.server {
+		margin-bottom: 15px;
+		.app {
+			background: #1e1e1e;
+			min-height: 140px;
+			border-radius: 5px;
+			.single {
+				width:100%;
+			}
+			.double {
+				width: 50%;
+			}
+		}
+	}
+}
